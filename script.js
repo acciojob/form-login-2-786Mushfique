@@ -1,11 +1,18 @@
 //your JS code here. If required.
- document.getElementById('form').addEventListener('submit', function (e) {
-      e.preventDefault();
+ const form = document.getElementById('form');
 
-      alert(
-        `First Name: ${firstname.value}\n` +
-        `Last Name: ${lastname.value}\n` +
-        `Phone Number: ${phonenumber.value}\n` +
-        `Email ID: ${emailid.value}`
-      );
-    });
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  const firstName = document.getElementById('firstname').value;
+  const lastName = document.getElementById('lastname').value;
+  const phoneNumber = document.getElementById('phonenumber').value;
+  const emailId = document.getElementById('emailid').value;
+
+  alert(
+    `First Name: ${firstName}\n` +
+    `Last Name: ${lastName}\n` +
+    `Phone Number: ${phoneNumber}\n` +
+    `Email ID: ${emailId}`
+  );
+});
